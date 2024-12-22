@@ -1,7 +1,23 @@
 import Link from "next/link";
 import Logo from "./logo";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+  const router=useRouter();
+  const [session, setSession]=useState(localStorage.getItem('session'));
+
+   useEffect(() => {
+      // Safe to update router after render
+      if (!session) {
+        localStorage.removeItem('session')
+        router.push('/');
+      }
+    }, [session]);
+  const handleclick=()=>{
+    setSession(null);
+  }
+
   return (
     <header className="fixed top-2 z-30 w-full md:top-6">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -12,7 +28,9 @@ export default function Header() {
           </div>
 
           {/* Desktop sign in links */}
-          <ul className="flex flex-1 items-center justify-end gap-3">
+          {session?
+            <button onClick={handleclick} className="btn-sm font-bold bg-red-500 shadow hover:bg-gray-50">logout</button>:
+            <ul className="flex flex-1 items-center justify-end gap-3">
             <li>
               <Link
                 href="/signin"
@@ -30,6 +48,8 @@ export default function Header() {
               </Link>
             </li>
           </ul>
+          }
+          
         </div>
       </div>
     </header>
