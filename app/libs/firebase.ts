@@ -8,14 +8,14 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDB3q_g3Z8reLVbefrtuimQL6HqEzQqvkw",
-  authDomain: "nda-project-d10eb.firebaseapp.com",
-  databaseURL: "https://nda-project-d10eb-default-rtdb.firebaseio.com",
-  projectId: "nda-project-d10eb",
-  storageBucket: "nda-project-d10eb.firebasestorage.app",
-  messagingSenderId: "430405152507",
-  appId: "1:430405152507:web:7736b1fc53e37ec72fca5e",
-  measurementId: "G-2J49WESL29"
+  apiKey: "AIzaSyAuCzBd1gNMGGQpE_XtDHt2aG_rh485ZG8",
+  authDomain: "ndawebsite-a36be.firebaseapp.com",
+  databaseURL: "https://ndawebsite-a36be-default-rtdb.firebaseio.com",
+  projectId: "ndawebsite-a36be",
+  storageBucket: "ndawebsite-a36be.firebasestorage.app",
+  messagingSenderId: "465375483037",
+  appId: "1:465375483037:web:c39fc8659e05fdb258b074",
+  measurementId: "G-2B98VBVMVQ"
 };
 
 // Initialize Firebase
